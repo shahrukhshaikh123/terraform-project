@@ -5,7 +5,7 @@ region = "ap-south-1"
 resource "aws_instance" "one" {
   ami             = "ami-040acbfd65da0c993"
   instance_type   = "t2.micro"
-  key_name        = "terrakey"
+  key_name        = "demokeypair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   user_data       = <<EOF
@@ -24,7 +24,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-040acbfd65da0c993"
   instance_type   = "t2.micro"
-  key_name        = "terrakey"
+  key_name        = "demokeypair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1b"
   user_data       = <<EOF
@@ -43,7 +43,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-040acbfd65da0c993"
   instance_type   = "t2.micro"
-  key_name        = "terrakey"
+  key_name        = "demokeypair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1a"
   tags = {
@@ -54,7 +54,7 @@ resource "aws_instance" "three" {
 resource "aws_instance" "four" {
   ami             = "ami-040acbfd65da0c993"
   instance_type   = "t2.micro"
-  key_name        = "terrakey"
+  key_name        = "demokeypair"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-south-1b"
   tags = {
